@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="description" content="AI 提示词大全 —— 140+ 精选中文提示词，覆盖写作、职场、编程、运营、求职等场景。一键复制，支持收藏。" />
+  <meta name="description" content="AI 提示词大全 —— 637+ 精选中文提示词，覆盖写作、职场、编程、运营、求职、副业、教学等场景。一键复制，支持收藏。" />
   <meta name="theme-color" content="#4f46e5" />
   <title>AI 提示词大全 · Prompt Library</title>
   <style>
@@ -281,6 +281,9 @@
     </section>
 
     <section class="grid" id="grid" aria-live="polite"></section>
+    <div style="text-align:center;margin:18px 0 8px">
+      <button type="button" class="btn btn-ghost" id="loadMore" hidden>加载更多</button>
+    </div>
     <div class="empty" id="empty" hidden>没有找到匹配的提示词，试试别的关键词或分类。</div>
   </main>
 
@@ -324,6 +327,8 @@
   let favOnly = false;
   let query = "";
   let current = null;
+  const PAGE_SIZE = 24;
+  let visibleCount = PAGE_SIZE;
 
   const $ = (id) => document.getElementById(id);
   const grid = $("grid");
@@ -409,16 +414,25 @@
     }).join("");
   }
 
-  function renderGrid() {
+  function renderGrid(resetPage) {
+    if (resetPage) visibleCount = PAGE_SIZE;
     const list = filtered();
-    $("shownMeta").textContent = `显示 ${list.length} 条`;
+    const shown = list.slice(0, visibleCount);
+    $("shownMeta").textContent = list.length
+      ? `显示 ${shown.length} / ${list.length} 条`
+      : `显示 0 条`;
+    const loadBtn = $("loadMore");
+    if (loadBtn) {
+      loadBtn.hidden = shown.length >= list.length || !list.length;
+      loadBtn.textContent = `加载更多（还有 ${Math.max(list.length - shown.length, 0)} 条）`;
+    }
     if (!list.length) {
       grid.innerHTML = "";
       empty.hidden = false;
       return;
     }
     empty.hidden = true;
-    grid.innerHTML = list.map(p => {
+    grid.innerHTML = shown.map(p => {
       const on = favs.has(p.id) ? "on" : "";
       const tags = (p.tags || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("");
       const preview = escapeHtml(p.prompt).slice(0, 160) + (p.prompt.length > 160 ? "…" : "");
@@ -514,19 +528,19 @@
     if (!btn) return;
     activeCat = btn.getAttribute("data-cat");
     renderChips();
-    renderGrid();
+    renderGrid(true);
   });
 
   searchInput.addEventListener("input", () => {
     query = searchInput.value;
-    renderGrid();
+    renderGrid(true);
   });
 
   $("favOnlyBtn").addEventListener("click", () => {
     favOnly = !favOnly;
     $("favOnlyBtn").classList.toggle("active", favOnly);
     $("favOnlyBtn").setAttribute("aria-pressed", favOnly ? "true" : "false");
-    renderGrid();
+    renderGrid(true);
   });
 
   $("themeBtn").addEventListener("click", () => {
@@ -562,6 +576,14 @@
   $("modalFav").addEventListener("click", () => {
     if (current) toggleFav(current.id);
   });
+
+  const loadMoreBtn = $("loadMore");
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener("click", () => {
+      visibleCount += PAGE_SIZE;
+      renderGrid(false);
+    });
+  }
 
   // Init
   $("totalCount").textContent = String(data.length);
