@@ -44,37 +44,42 @@
 
 ## 分类与数量
 
-本仓库当前内置 **637** 条原创提示词（以 `prompts-data.js` / `prompts.json` 为准）。
+本仓库当前内置 **662** 条原创提示词（以 `prompts-data.js` / `prompts.json` 为准）。
 
 | 数量 | 分类 |
 |---:|:---|
-| 27 | PPT与汇报 |
+| 30 | 职场办公 |
+| 29 | 学习与考试 |
+| 29 | 小红书抖音闲鱼 |
+| 29 | 生活助手 |
+| 29 | 电商客服 |
+| 28 | PPT与汇报 |
+| 28 | 创意与绘画 |
+| 28 | 数据分析 |
+| 28 | 求职面试 |
+| 28 | 编程辅助 |
 | 27 | 写作与文案 |
-| 27 | 创意与绘画 |
-| 27 | 学习与考试 |
-| 27 | 小红书抖音闲鱼 |
-| 27 | 数据分析 |
-| 27 | 求职面试 |
-| 27 | 生活助手 |
-| 27 | 电商客服 |
-| 27 | 编程辅助 |
 | 27 | 翻译润色 |
-| 27 | 职场办公 |
 | 27 | 角色扮演 |
+| 24 | 副业赚钱 |
+| 23 | Midjourney即梦绘画 |
+| 23 | 自媒体运营 |
+| 22 | AI视频 |
 | 22 | 写代码调试 |
-| 22 | 副业赚钱 |
-| 22 | 自媒体运营 |
-| 20 | AI视频 |
-| 20 | Midjourney即梦绘画 |
+| 21 | 教师备课 |
 | 20 | 产品与创业 |
 | 20 | 健康与健身 |
 | 20 | 心理与情感 |
-| 20 | 教师备课 |
 | 20 | 旅行规划 |
 | 20 | 法律与合同 |
 | 20 | 育儿与教育 |
 | 20 | 营销策划 |
 | 20 | 财务与理财 |
+
+## 更新日志（CHANGELOG）
+
+- **2026-11-09**：新增 25 条提示词（总数 662 条）。紧跟本周热点：即梦 Seedream 5.5 多轮编辑、透明背景素材、海报文字渲染；Kimi 超长上下文资料提炼、AI 智能体任务说明书；15 秒带声音 AI 短视频；双 11 售后、闲鱼转卖、快递清单与大促复盘；年终总结/述职、考研冲刺、国考申论等。
+- **2026-11-08**：扩充至 637 条，新增分类并支持加载更多。
 
 ## 本地预览
 
@@ -104,7 +109,7 @@ python3 -m http.server 8080
 
 ## English
 
-**AI Prompt Library (Chinese-first)** — a static site with **637+** original prompts across **27** categories (writing, work, ops, coding, side hustles, teaching, AI image/video, and more). Search, filter, one-click copy, favorites (localStorage), placeholder fill-in, load-more pagination, dark mode. No build step.
+**AI Prompt Library (Chinese-first)** — a static site with **662+** original prompts across **27** categories (writing, work, ops, coding, side hustles, teaching, AI image/video, and more). Search, filter, one-click copy, favorites (localStorage), placeholder fill-in, load-more pagination, dark mode. No build step.
 
 - Live: https://812822586-droid.github.io/ai-prompts/
 - Open `index.html` locally, or enable GitHub Pages on the `main` branch `/` root
