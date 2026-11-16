@@ -44,40 +44,41 @@
 
 ## 分类与数量
 
-本仓库当前内置 **662** 条原创提示词（以 `prompts-data.js` / `prompts.json` 为准）。
+本仓库当前内置 **690** 条原创提示词（以 `prompts-data.js` / `prompts.json` 为准）。
 
 | 数量 | 分类 |
 |---:|:---|
-| 30 | 职场办公 |
-| 29 | 学习与考试 |
-| 29 | 小红书抖音闲鱼 |
-| 29 | 生活助手 |
-| 29 | 电商客服 |
+| 32 | 职场办公 |
+| 31 | 学习与考试 |
+| 31 | 小红书抖音闲鱼 |
+| 31 | 生活助手 |
+| 30 | 电商客服 |
+| 29 | 创意与绘画 |
+| 29 | 求职面试 |
+| 29 | 编程辅助 |
 | 28 | PPT与汇报 |
-| 28 | 创意与绘画 |
+| 28 | 写作与文案 |
 | 28 | 数据分析 |
-| 28 | 求职面试 |
-| 28 | 编程辅助 |
-| 27 | 写作与文案 |
+| 28 | 角色扮演 |
 | 27 | 翻译润色 |
-| 27 | 角色扮演 |
+| 25 | 自媒体运营 |
+| 24 | Midjourney即梦绘画 |
 | 24 | 副业赚钱 |
-| 23 | Midjourney即梦绘画 |
-| 23 | 自媒体运营 |
+| 23 | 写代码调试 |
 | 22 | AI视频 |
-| 22 | 写代码调试 |
-| 21 | 教师备课 |
-| 20 | 产品与创业 |
-| 20 | 健康与健身 |
-| 20 | 心理与情感 |
-| 20 | 旅行规划 |
+| 22 | 教师备课 |
+| 22 | 旅行规划 |
+| 22 | 营销策划 |
+| 21 | 产品与创业 |
+| 21 | 健康与健身 |
+| 21 | 心理与情感 |
+| 21 | 育儿与教育 |
+| 21 | 财务与理财 |
 | 20 | 法律与合同 |
-| 20 | 育儿与教育 |
-| 20 | 营销策划 |
-| 20 | 财务与理财 |
 
 ## 更新日志（CHANGELOG）
 
+- **2026-11-16**：新增 28 条提示词（总数 690 条）。结合本周动态：AI 单次输入有上限时的超长文档分段接力、同一任务多模型对比评测、让 AI 回答附可核查来源、大模型 API 接入设计与限流报错排查、AI 智能体上线前风险清单；生活与内容场景：聚餐找店、自制糖葫芦、新手增肌、旅行穿搭出片、秋冬采摘、“纯过日子”笔记、闲鱼手作上架、辟谣科普、综艺二创合规；年末季：双12客服话术、元旦活动、期末复习与评语、寒假约定、年底收支盘点、年末感谢信、年底跳槽评估等。
 - **2026-11-09**：新增 25 条提示词（总数 662 条）。紧跟本周热点：即梦 Seedream 5.5 多轮编辑、透明背景素材、海报文字渲染；Kimi 超长上下文资料提炼、AI 智能体任务说明书；15 秒带声音 AI 短视频；双 11 售后、闲鱼转卖、快递清单与大促复盘；年终总结/述职、考研冲刺、国考申论等。
 - **2026-11-08**：扩充至 637 条，新增分类并支持加载更多。
 
@@ -109,7 +110,7 @@ python3 -m http.server 8080
 
 ## English
 
-**AI Prompt Library (Chinese-first)** — a static site with **662+** original prompts across **27** categories (writing, work, ops, coding, side hustles, teaching, AI image/video, and more). Search, filter, one-click copy, favorites (localStorage), placeholder fill-in, load-more pagination, dark mode. No build step.
+**AI Prompt Library (Chinese-first)** — a static site with **690+** original prompts across **27** categories (writing, work, ops, coding, side hustles, teaching, AI image/video, and more). Search, filter, one-click copy, favorites (localStorage), placeholder fill-in, load-more pagination, dark mode. No build step.
 
 - Live: https://812822586-droid.github.io/ai-prompts/
 - Open `index.html` locally, or enable GitHub Pages on the `main` branch `/` root
